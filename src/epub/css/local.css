@@ -1,2 +1,137 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
+
+section[epub|type~="halftitlepage"] span[epub|type~="subtitle"]{
+	display: block;
+	font-size: .75em;
+	font-weight: normal;
+}
+
+[epub|type~="z3998:song"] p,
+[epub|type~="z3998:poem"] p{
+	text-align: left;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:song"] header{
+	margin-bottom: 1em;
+	margin-top: 3em;
+}
+
+[epub|type~="z3998:song"] header p{
+	text-align: center;
+}
+
+[epub|type~="z3998:song"] p > span,
+[epub|type~="z3998:verse"] p > span,
+[epub|type~="z3998:poem"] p > span{
+	display: block;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+[epub|type~="z3998:song"] p > span + br,
+[epub|type~="z3998:verse"] p > span + br,
+[epub|type~="z3998:poem"] p > span + br{
+	display: none;
+}
+
+[epub|type~="z3998:song"] p + p,
+[epub|type~="z3998:poem"] p + p{
+	margin-top: 1em;
+}
+
+[epub|type~="z3998:song"] + p,
+[epub|type~="z3998:poem"] + p{
+	text-indent: 0;
+}
+
+p span.i1{
+	text-indent: -1em;
+	padding-left: 2em;
+}
+
+p span.i2{
+	text-indent: -1em;
+	padding-left: 3em;
+}
+
+span.elision{
+	margin: .5em;
+	margin-left: 3rem;
+}
+
+[epub|type~="epigraph"] span.elision{
+	font-style: normal;
+}
+
+#chapter-14 > blockquote p{
+	font-variant: small-caps;
+	text-align: center;
+	text-indent: 0;
+}
+
+/* All epigraphs */
+[epub|type~="epigraph"]{
+	font-style: italic;
+	hyphens: none;
+}
+
+[epub|type~="epigraph"] i{
+	font-style: normal;
+}
+
+[epub|type~="epigraph"] cite{
+	margin-top: 1em;
+	font-style: normal;
+	font-variant: small-caps;
+}
+
+[epub|type~="epigraph"] cite i{
+	font-style: italic;
+}
+/* End epigraphs in section headers */
+
+[epub|type~="z3998:drama"]{
+	border-collapse: collapse;
+}
+
+[epub|type~="z3998:drama"] tr:first-child td{
+	padding-top: 0;
+}
+
+[epub|type~="z3998:drama"] tr:last-child td{
+	padding-bottom: 0;
+}
+
+[epub|type~="z3998:drama"] td{
+	vertical-align: top;
+	padding: .5em;
+}
+
+[epub|type~="z3998:drama"] td:last-child{
+	padding-right: 0;
+}
+
+[epub|type~="z3998:drama"] td:first-child{
+	padding-left: 0;
+}
+
+[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"]{
+	hyphens: none;
+	text-align: right;
+	width: 20%;
+}
+
+[epub|type~="z3998:drama"] td p{
+	text-indent: 0;
+}
+
+[epub|type~="z3998:drama"] table{
+	margin: 1em auto;
+	width: 100%;
+}
+
+[epub|type~="z3998:persona"]{
+	font-variant: all-small-caps;
+}
